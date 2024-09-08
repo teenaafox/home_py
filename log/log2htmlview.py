@@ -98,7 +98,7 @@ def main():
         )
         sys.exit(1)
 
-    log_file_path = sys.agrv[1]
+    log_file_path = sys.argv[1]
     output_html_path = sys.argv[3]
 
     try:
@@ -129,4 +129,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
