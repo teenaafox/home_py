@@ -83,7 +83,7 @@ def main(command_file):
         print(f"파일에서 명령어를 찾을 수 없습니다. 종료합니다.")
         sys.exit(0)
 
-    print(f"실행할 명령어 {len(commands)개를 찾았습니다.}")
+    print(f"실행할 명령어 {len(commands)}개를 찾았습니다.")
     print("순차적으로 명령어 실행을 시작합니다...")
 
     if execute_commands_sequentially(commands):
