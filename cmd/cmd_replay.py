@@ -11,7 +11,7 @@ def run_command(command):
     try:
         print(f"명령어 실행 중: {command}")
         result = subprocess.run(command, shell=True, check=True, text=True, capture_output=True)
-        print("출력:", result.stdout)
+        print(result.stdout)
         return True
     except subprocess.CalledProcessError as e:
         print(f"명령어 '{command}' 실행 중 오류 발생: {e}")
@@ -52,7 +52,7 @@ def execute_commands_sequentially(commands):
         if not success:
             print(f"명령어 {cmd} 실행 실패. 시퀀스를 중단합니다.")
             return False
-        print(f"명령어가 성공적으로 완료되었습니다. 다음 명령어로 이동합니다.\n")
+       ## print(f"명령어가 성공적으로 완료되었습니다. 다음 명령어로 이동합니다.\n")
     return True
 
 def main(command_file):
