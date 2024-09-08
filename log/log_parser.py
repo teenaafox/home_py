@@ -7,7 +7,7 @@
 import re
 import sys
 from datetime import datetime
-from collection import deque
+from collections import deque
 
 def parse_log_file(file_path, num_lines):
     # 2024-08-05T23:27:41+0900
@@ -77,4 +77,3 @@ def main():
 
 if __name__ == "__main__":
     main() 
-    
