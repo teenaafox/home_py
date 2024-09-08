@@ -40,7 +40,7 @@ def read_commands_from_file(filename):
         print(f"파일 {filename} 읽기 오류: {e}")
         return None
     
-def execute_commands_sequentially(commands)
+def execute_commands_sequentially(commands):
     """
     주어진 명령어 리스트를 순차적으로 실행합니다.
 
