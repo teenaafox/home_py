@@ -46,7 +46,7 @@ def create_html_content(parsed_logs):
         <title>로그 파서 결과</title>
         <style>
             body { font-family: Arial, sans-serif; }
-            table { border-collapse: collapse; width: 100% }
+            table { border-collapse: collapse; width: 100%; }
             th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
             th { background-color: #f2f2f2; }
             tr:nth-child(even) { background-color: #f9f9f9; }
@@ -78,6 +78,7 @@ def create_html_content(parsed_logs):
     """
 
     return html_content
+
 
 def open_html_file(file_path):
     try:
