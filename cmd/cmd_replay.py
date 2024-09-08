@@ -14,7 +14,7 @@ def run_command(command):
         print(result.stdout)
         return True
     except subprocess.CalledProcessError as e:
-        print(f"명령어 '{command}' 실행 중 오류 발생: {e}")
+        print(f"명령어 {command} 실행 중 오류 발생: {e}")
         print("오류 출력:", e.stderr)
         return False
     
