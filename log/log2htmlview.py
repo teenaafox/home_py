@@ -118,7 +118,7 @@ def main():
 
     try:
         with open(output_html_path, "w", encoding="utf-8") as html_file:
-            html_file.wirte(html_content)
+            html_file.write(html_content)
         print(f"HTML 파일이 성공적으로 생성되었습니다: {output_html_path}")
 
         # HTML 파일 자동으로 열기
