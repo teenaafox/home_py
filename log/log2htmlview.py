@@ -4,6 +4,7 @@ import subprocess
 from datetime import datetime
 from collections import deque
 
+
 def parse_log_file(file_path, num_lines):
     pattern = r"(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+\d{4}) (\w+) (.+)"
     parsed_logs = deque(maxlen=num_lines)
@@ -35,6 +36,7 @@ def parse_log_file(file_path, num_lines):
         sys.exit(1)
 
     return list(parsed_logs)
+
 
 def create_html_content(parsed_logs):
     html_content = """
@@ -68,7 +70,7 @@ def create_html_content(parsed_logs):
                 <td>{log['timestamp']}</td>
                 <td>{log['log_level']}</td>
                 <td>{log['message']}</td>
-            <tr>
+            </tr>
         """
 
     html_content += """
@@ -115,7 +117,7 @@ def main():
     html_content = create_html_content(parsed_logs)
 
     try:
-        with open(output_html_path, "w", encoding="uft-8") as html_file:
+        with open(output_html_path, "w", encoding="utf-8") as html_file:
             html_file.wirte(html_content)
         print(f"HTML 파일이 성공적으로 생성되었습니다: {output_html_path}")
 
